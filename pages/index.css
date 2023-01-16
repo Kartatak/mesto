@@ -3,11 +3,17 @@
 @import url(../blocks/body/body.css);
 @import url(../blocks/page/page.css);
 
+
 /*_______________elements________________*/
 @import url(../blocks/elements/elements.css);
 
+/*_______________element________________*/
+@import url(../blocks/element/__image/element__image.css);
+@import url(../blocks/element/__text/element__text.css);
+@import url(../blocks/element/element.css);
 
 /*_______________footer________________*/
+@import url(../blocks/footer/__text/footer__text.css);
 @import url(../blocks/footer/footer.css);
 
 /*_______________header________________*/
@@ -16,4 +22,11 @@
 @import url(../blocks/header/__logo/header__logo.css);
 
 /*_______________profile________________*/
+@import url(../blocks/profile/__avatar/profile__avatar.css);
+@import url(../blocks/profile/__button/profile__button.css);
+@import url(../blocks/profile/__paragraph/profile__paragraph.css);
+@import url(../blocks/profile/__text/profile__text.css);
+@import url(../blocks/profile/__title/profile__title.css);
 @import url(../blocks/profile/profile.css);
+
+
