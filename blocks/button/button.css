@@ -1,19 +1,17 @@
 .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
- width: 150px;
-height: 50px;
+    width: 150px;
+    height: 50px;
     border: 2px solid #FFFFFF;
     border-radius: 2px;
     background-color: #000000;
-
+    margin-left: auto;
 }
 
 @media screen and (max-width: 320px) {
 .button {
     width: 100%;
     margin-top: 36px;
+    margin-left: 0;
 }
 }
     
