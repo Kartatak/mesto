@@ -5,3 +5,10 @@
     justify-content: center;
     padding-left: 30px;
 }
+
+@media screen and (max-width: 320px) {
+    .profile__paragraph {
+        align-items: center;
+        padding-left: 0;
+    }
+} 

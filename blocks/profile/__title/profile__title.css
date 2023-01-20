@@ -7,3 +7,11 @@ color: #FFFFFF;
 margin: 0;
 padding-bottom: 16px;
 }
+
+@media screen and (max-width: 320px) {
+    .profile__title {
+        font-size: 27px;
+line-height: 122%;
+padding-bottom: 14px;
+    }    
+}

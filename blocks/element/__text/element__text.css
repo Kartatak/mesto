@@ -8,3 +8,10 @@ text-align: start;
 padding-left: 21px;
 padding-bottom: 31px;
 }
+
+@media screen and (max-width: 320px) {
+.element__text {
+    
+}
+}
+    
