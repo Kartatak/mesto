@@ -23,10 +23,11 @@
 
 /*_______________profile________________*/
 @import url(../blocks/profile/__avatar/profile__avatar.css);
-@import url(../blocks/profile/__button/profile__button.css);
 @import url(../blocks/profile/__paragraph/profile__paragraph.css);
 @import url(../blocks/profile/__text/profile__text.css);
 @import url(../blocks/profile/__title/profile__title.css);
 @import url(../blocks/profile/profile.css);
 
-
+/*_______________button________________*/
+@import url(../blocks/button/button.css);
+@import url(../blocks/button/__plus/button__plus.css);
