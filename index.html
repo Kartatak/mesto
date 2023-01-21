@@ -32,7 +32,7 @@
               onclick="openForm()"
             />
           </button>
-          <div class="popup popup_active">
+          <div class="popup">
             <form class="popup__container">
               <h1 class="popup__title">Редактировать профиль</h1>
               <input
@@ -51,9 +51,9 @@
               />
               <button type="submit" class="popup__submit">Сохранить</button>
             </form>
-            <button type="button" class="popup__close" onclick="closeForm()">
-              <img src="./images/Close Icon.svg" alt="close" />
-            </button>
+            <div class="popup__close" onclick="closeForm()">
+              <img src="./images/Close Icon.svg" />
+            </div>
           </div>
         </section>
         <section class="elements">
