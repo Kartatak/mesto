@@ -7,6 +7,9 @@ color: #000000;
 text-align: start;
 padding-left: 21px;
 padding-bottom: 31px;
+text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
   

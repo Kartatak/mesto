@@ -13,7 +13,7 @@
         <img src="./images/Mesto-logo.png" alt="logo" class="header__logo" />
         <img src="./images/Line.png" alt="line" class="header__line" />
       </header>
-      <main class="main">
+      <main>
         <section class="profile">
           <img
             src="./images/foto-Zhack.png"
@@ -25,8 +25,36 @@
             <p class="profile__text">Исследователь океана</p>
           </div>
           <button class="button">
-            <img src="./images/Vector.svg" alt="кнопка" class="button__plus" />
+            <img
+              src="./images/Vector.svg"
+              alt="кнопка"
+              class="button__plus"
+              onclick="openForm()"
+            />
           </button>
+          <form class="popup__container popup__container_opened">
+            <h1 class="popup__title">Редактировать профиль</h1>
+            <input
+              class="popup__name"
+              type="text"
+              placeholder="имя"
+              name="name"
+              required
+            />
+            <input
+              class="popup__job"
+              type="text"
+              placeholder="о себе"
+              name="job"
+              required
+            />
+            <button type="submit" class="popup__submit">Сохранить</button>
+            <button
+              type="button"
+              class="popup__close"
+              onclick="closeForm()"
+            ></button>
+          </form>
         </section>
         <section class="elements">
           <div class="element">
