@@ -5,3 +5,7 @@
   margin: 18px;
   background-color: #000000;
 }
+
+.button-edit:hover {
+  opacity: 0.6;
+}

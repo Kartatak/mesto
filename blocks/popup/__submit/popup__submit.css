@@ -11,3 +11,7 @@
   color: #ffffff;
   margin-top: 43px;
 }
+
+.popup__submit:hover {
+  opacity: 0.8;
+}
