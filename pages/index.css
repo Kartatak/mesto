@@ -3,7 +3,6 @@
 @import url(../blocks/body/body.css);
 @import url(../blocks/page/page.css);
 
-
 /*_______________elements________________*/
 @import url(../blocks/elements/elements.css);
 
@@ -42,4 +41,6 @@
 @import url(../blocks/popup/__title/popup__title.css);
 @import url(../blocks/popup/_active/popup_active.css);
 
-
+/*_______________button-edit________________*/
+@import url(../blocks/button-edit/button-edit.css);
+@import url(../blocks/button-edit/__img/button-edit__img.css);
