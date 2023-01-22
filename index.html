@@ -37,27 +37,29 @@
           <button class="button" onclick="openForm()">
             <img src="./images/Vector.svg" alt="button" class="button__plus" />
           </button>
-          <div class="popup">
-            <form class="popup__container">
-              <h1 class="popup__title">Редактировать профиль</h1>
-              <input
-                class="popup__name"
-                type="text"
-                placeholder="имя"
-                name="name"
-                required
-              />
-              <input
-                class="popup__job"
-                type="text"
-                placeholder="о себе"
-                name="job"
-                required
-              />
-              <button type="submit" class="popup__submit">Сохранить</button>
-            </form>
-            <div class="popup__close" onclick="closeForm()">
-              <img src="./images/Close Icon.svg" />
+          <div class="backdrop backdrop_opened">
+            <div class="popup">
+              <form class="popup__container">
+                <h1 class="popup__title">Редактировать профиль</h1>
+                <input
+                  class="popup__name"
+                  type="text"
+                  placeholder="имя"
+                  name="name"
+                  required
+                />
+                <input
+                  class="popup__job"
+                  type="text"
+                  placeholder="о себе"
+                  name="job"
+                  required
+                />
+                <button type="submit" class="popup__submit">Сохранить</button>
+              </form>
+              <div class="popup__close" onclick="closeForm()">
+                <img src="./images/Close Icon.svg" />
+              </div>
             </div>
           </div>
         </section>
