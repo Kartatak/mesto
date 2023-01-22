@@ -1,15 +1,12 @@
 .element__text {
-font-style: normal;
-font-weight: 900;
-font-size: 24px;
-line-height: 1.208;
-color: #000000;
-text-align: start;
-padding-left: 21px;
-padding-bottom: 31px;
-text-overflow: ellipsis;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.208;
+  color: #000000;
+  text-align: start;
+  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  margin: 0;
 }
-
-  
