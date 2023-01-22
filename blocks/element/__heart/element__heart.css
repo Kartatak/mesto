@@ -1,8 +1,9 @@
 .element__heart {
   width: 22px;
   height: 19px;
+  color: #000000;
 }
 
 .element__heart:hover {
-  opacity: 0.6;
+  opacity: 0.5;
 }

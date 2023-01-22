@@ -2,3 +2,10 @@
   width: 10px;
   height: 10px;
 }
+
+@media screen and (max-width: 320px) {
+  .button-edit__img {
+    width: 7.5px;
+    height: 7.5px;
+  }
+}
