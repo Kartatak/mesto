@@ -8,6 +8,7 @@ function handleFormSubmit(evt) {
   evt.preventDefault();
   profileTitle.textContent = nameInput.value;
   profileText.textContent = jobInput.value;
-
-  formElement.addEventListener("submit", handleFormSubmit);
+  closeform();
 }
+
+formElement.addEventListener("click", handleFormSubmit);
