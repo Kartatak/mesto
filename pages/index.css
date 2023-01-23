@@ -48,6 +48,6 @@
 @import url(../blocks/button-edit/button-edit.css);
 @import url(../blocks/button-edit/__img/button-edit__img.css);
 
-/*_______________backdrop________________*/
-@import url(../blocks/backdrop/backdrop.css);
-@import url(../blocks/backdrop/_opened/backdrop_opened.css);
+/*_______________overlay________________*/
+@import url(../blocks/overlay/overlay.css);
+@import url(../blocks/overlay/_opened/overlay_opened.css);
