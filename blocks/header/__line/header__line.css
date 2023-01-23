@@ -1,5 +1,3 @@
-@media screen and (max-width: 320px) {
-    .header__line {
-        width: 100%;
-    }
+.header__line {
+  width: 100%;
 }
