@@ -6,7 +6,8 @@
   height: 24px;
   border: 1px solid #ffffff;
   background-color: #000000;
-  margin-left: 25px;
+  margin: 0 18px 0;
+  cursor: pointer;
 }
 
 .button-edit:hover {
@@ -15,7 +16,7 @@
 
 @media screen and (max-width: 320px) {
   .button-edit {
-    margin-left: 10px;
+    margin: 0 0 0 10px;
     width: 18px;
     height: 18px;
   }

@@ -5,6 +5,7 @@
   border-radius: 2px;
   background-color: #000000;
   margin-left: auto;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 320px) {
