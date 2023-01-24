@@ -43,9 +43,9 @@
               class="profile__button-plus"
             />
           </button>
-          <div class="overlay">
-            <div class="popup">
-              <form class="popup__container">
+          <div class="popup">
+            <div class="popup__container">
+              <form class="popup__form">
                 <h2 class="popup__title">Редактировать профиль</h2>
                 <input
                   class="popup__name"
@@ -65,11 +65,13 @@
                 />
                 <button type="submit" class="popup__submit">Сохранить</button>
               </form>
-              <img
-                class="popup__close"
-                src="./images/CloseIcon.svg"
-                alt="close"
-              />
+              <button type="button" class="popup__close">
+                <img
+                  src="./images/CloseIcon.svg"
+                  alt="close"
+                  class="popup__close-img"
+                />
+              </button>
             </div>
           </div>
         </section>

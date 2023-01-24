@@ -1,7 +1,7 @@
 //____Button-edit
 function openform() {
-  let overlay = document.querySelector(".overlay");
-  overlay.classList.add("overlay_opened");
+  let overlay = document.querySelector(".popup");
+  overlay.classList.add("popup_opened");
 }
 
 let buttonEdit = document.querySelector(".button-edit");
