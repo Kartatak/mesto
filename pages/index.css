@@ -30,6 +30,8 @@
 @import url(../blocks/profile/__title/profile__title.css);
 @import url(../blocks/profile/profile.css);
 @import url(../blocks/profile/__box-name/profile__box-name.css);
+@import url(../blocks/profile/__button-edit/profile__button-edit.css);
+@import url(../blocks/profile/__button-edit-img/profile__button-edit-img.css);
 
 /*_______________button________________*/
 @import url(../blocks/button/button.css);
@@ -43,10 +45,6 @@
 @import url(../blocks/popup/__name/popup__name.css);
 @import url(../blocks/popup/__submit/popup__submit.css);
 @import url(../blocks/popup/__title/popup__title.css);
-
-/*_______________button-edit________________*/
-@import url(../blocks/button-edit/button-edit.css);
-@import url(../blocks/button-edit/__img/button-edit__img.css);
 
 /*_______________overlay________________*/
 @import url(../blocks/overlay/overlay.css);
