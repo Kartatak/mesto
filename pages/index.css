@@ -32,10 +32,8 @@
 @import url(../blocks/profile/__box-name/profile__box-name.css);
 @import url(../blocks/profile/__button-edit/profile__button-edit.css);
 @import url(../blocks/profile/__button-edit-img/profile__button-edit-img.css);
-
-/*_______________button________________*/
-@import url(../blocks/button/button.css);
-@import url(../blocks/button/__plus/button__plus.css);
+@import url(../blocks/profile/__button/profile__button.css);
+@import url(../blocks/profile/__button-plus/profile__button-plus.css);
 
 /*_______________popup________________*/
 @import url(../blocks/popup/popup.css);
