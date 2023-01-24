@@ -3,4 +3,6 @@
   position: relative;
   align-items: center;
   justify-content: center;
+  width: calc(100% - 19px * 2);
+  max-width: 510px;
 }
