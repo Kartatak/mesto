@@ -11,5 +11,6 @@
   .profile__paragraph {
     align-items: center;
     padding-left: 0;
+    max-width: 100%;
   }
 }
