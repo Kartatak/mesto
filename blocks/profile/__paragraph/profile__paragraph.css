@@ -1,14 +1,15 @@
 .profile__paragraph {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 30px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+  max-width: 50%;
 }
 
 @media screen and (max-width: 320px) {
-    .profile__paragraph {
-        align-items: center;
-        padding-left: 0;
-    }
-} 
+  .profile__paragraph {
+    align-items: center;
+    padding-left: 0;
+  }
+}
