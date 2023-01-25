@@ -2,7 +2,7 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  margin: 45px 200px 0;
+  margin: 45px 0 0;
   border-bottom: 1px solid #545454;
 }
 
