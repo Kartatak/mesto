@@ -13,10 +13,11 @@
   width: 100%;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 600px) {
   .profile__text {
     font-size: 14px;
     line-height: 1.21;
     padding-top: 14px;
+    text-align: center;
   }
 }

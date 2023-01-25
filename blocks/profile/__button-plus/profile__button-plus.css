@@ -3,7 +3,7 @@
   max-height: 22px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 600px) {
   .profile__button-plus {
     max-width: 16px;
     max-height: 16px;
