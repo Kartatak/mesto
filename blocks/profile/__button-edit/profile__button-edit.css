@@ -3,12 +3,10 @@
   align-items: center;
   justify-content: center;
   border: none;
+  background: none;
   cursor: pointer;
-  width: 0;
-  margin: 0;
   padding: 0;
-  position: relative;
-  left: 28px;
+  margin-left: 28px;
 }
 
 .profile__button-edit:hover {
@@ -17,6 +15,9 @@
 
 @media screen and (max-width: 320px) {
   .profile__button-edit {
+    width: 0;
+    margin: 0;
+    position: relative;
     left: 20px;
   }
 }
