@@ -7,7 +7,7 @@
   max-width: 50%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
   .profile__paragraph {
     align-items: center;
     padding-left: 0;

@@ -13,9 +13,10 @@
   margin-block-end: 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
   .profile__title {
     font-size: 27px;
     line-height: 122%;
+    max-width: 220px;
   }
 }
