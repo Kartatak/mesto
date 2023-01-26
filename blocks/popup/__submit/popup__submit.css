@@ -9,7 +9,7 @@
   line-height: 1.22;
   text-align: center;
   color: #ffffff;
-  margin-top: 43px;
+  margin-top: 45px;
   cursor: pointer;
   border: none;
 }
@@ -21,5 +21,6 @@
 @media screen and (max-width: 320px) {
   .popup__submit {
     font-size: 14px;
+    height: 46px;
   }
 }
