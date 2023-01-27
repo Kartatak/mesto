@@ -4,13 +4,13 @@
   flex-direction: column;
   justify-content: center;
   padding-left: 30px;
-  max-width: 50%;
+  max-width: calc(100% - 330px);
 }
 
 @media screen and (max-width: 640px) {
   .profile__paragraph {
     align-items: center;
     padding-left: 0;
-    max-width: 100%;
+    max-width: none;
   }
 }
