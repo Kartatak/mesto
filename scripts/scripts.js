@@ -13,10 +13,6 @@ function openform() {
   popup.classList.add("popup_opened");
 }
 
-// function changecolour(event) {
-//   event.currentTarget.classList.toggle("element__heart_active");
-// }
-
 function closeform() {
   popup.classList.remove("popup_opened");
 }
