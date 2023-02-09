@@ -5,9 +5,10 @@ let nameInput = document.querySelector("#popup_name");
 let jobInput = document.querySelector("#popup_job");
 let profileTitle = document.querySelector(".profile__title");
 let profileText = document.querySelector(".profile__text");
-let buttonEdit = document.querySelector(".profile__button-edit");
-let buttonClose = document.querySelector(".popup__close");
-let buttonPlus = document.querySelector(".profile__button");
+let buttonOpenProfile = document.querySelector(".profile__button-edit");
+let buttonCloseProfile = document.querySelector("#popupCloseProfile");
+let buttonClosePlace = document.querySelector("#popupClosePlace");
+let buttonOpenPlace = document.querySelector(".profile__button");
 let textInput = document.querySelector("#popup_text");
 let linkInput = document.querySelector("#popup_link");
 const initialCards = [
@@ -37,20 +38,24 @@ const initialCards = [
   },
 ];
 
-function openform() {
+function openformProfile() {
   nameInput.value = profileTitle.textContent;
   jobInput.value = profileText.textContent;
   popupProfile.classList.add("popup_opened");
 }
 
-function openButtonPlus() {
+function openformPlace() {
   textInput.value = "";
   linkInput.value = "";
   popupPlace.classList.add("popup_opened");
 }
 
-function closeform() {
-  popup.classList.remove("popup_opened");
+function closeformProfile() {
+  popupProfile.classList.remove("popup_opened");
+}
+
+function closeformPlace() {
+  popupPlace.classList.remove("popup_opened");
 }
 
 function handleFormSubmit(evt) {
@@ -60,10 +65,11 @@ function handleFormSubmit(evt) {
   closeform();
 }
 
-buttonEdit.addEventListener("click", openform);
+buttonOpenProfile.addEventListener("click", openformProfile);
 form.addEventListener("submit", handleFormSubmit);
-buttonClose.addEventListener("click", closeform);
-buttonPlus.addEventListener("click", openButtonPlus);
+buttonCloseProfile.addEventListener("click", closeformProfile);
+buttonOpenPlace.addEventListener("click", openformPlace);
+buttonClosePlace.addEventListener("click", closeformPlace);
 
 // let hearts = document.querySelectorAll(".element__heart");
 // for (let i = 0; i < hearts.length; i++) {

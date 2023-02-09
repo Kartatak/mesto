@@ -63,7 +63,7 @@
                 />
                 <button type="submit" class="popup__submit">Сохранить</button>
               </form>
-              <button type="button" class="popup__close">
+              <button type="button" class="popup__close" id="popupCloseProfile">
                 <img
                   src="./images/CloseIcon.svg"
                   alt="close"
@@ -71,36 +71,37 @@
                 />
               </button>
             </div>
-            <div class="popup" id="popup_place">
-              <div class="popup__container">
-                <form class="popup__form" name="profile_place">
-                  <h2 class="popup__title">Новое место</h2>
-                  <input
-                    id="popup_text"
-                    class="popup__input"
-                    type="text"
-                    placeholder="Название"
-                    name="name_place"
-                    required
-                  />
-                  <input
-                    id="popup_link"
-                    class="popup__input"
-                    type="text"
-                    placeholder="Ссылка на картинку"
-                    name="link"
-                    required
-                  />
-                  <button type="submit" class="popup__submit">Создать</button>
-                </form>
-                <button type="button" class="popup__close">
-                  <img
-                    src="./images/CloseIcon.svg"
-                    alt="close"
-                    class="popup__close-img"
-                  />
-                </button>
-              </div>
+          </div>
+          <div class="popup" id="popup_place">
+            <div class="popup__container">
+              <form class="popup__form" name="profile_place">
+                <h2 class="popup__title">Новое место</h2>
+                <input
+                  id="popup_text"
+                  class="popup__input"
+                  type="text"
+                  placeholder="Название"
+                  name="name_place"
+                  required
+                />
+                <input
+                  id="popup_link"
+                  class="popup__input"
+                  type="text"
+                  placeholder="Ссылка на картинку"
+                  name="link"
+                  required
+                />
+                <button type="submit" class="popup__submit">Создать</button>
+              </form>
+              <button type="button" class="popup__close" id="popupClosePlace">
+                <img
+                  src="./images/CloseIcon.svg"
+                  alt="close"
+                  class="popup__close-img"
+                />
+              </button>
+            </div>
           </div>
         </section>
         <section class="elements">
