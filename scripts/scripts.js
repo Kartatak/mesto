@@ -1,6 +1,7 @@
 let popupProfile = document.querySelector("#popup_profile");
 let popupPlace = document.querySelector("#popup_place");
-let form = document.querySelector(".popup__form");
+let form = document.querySelector("#form_profile");
+let formPlace = document.querySelector("#form_place");
 let nameInput = document.querySelector("#popup_name");
 let jobInput = document.querySelector("#popup_job");
 let profileTitle = document.querySelector(".profile__title");
@@ -62,31 +63,42 @@ function handleFormSubmit(evt) {
   evt.preventDefault();
   profileTitle.textContent = nameInput.value;
   profileText.textContent = jobInput.value;
-  closeform();
+  closeformProfile();
 }
 
-buttonOpenProfile.addEventListener("click", openformProfile);
-form.addEventListener("submit", handleFormSubmit);
-buttonCloseProfile.addEventListener("click", closeformProfile);
-buttonOpenPlace.addEventListener("click", openformPlace);
-buttonClosePlace.addEventListener("click", closeformPlace);
+function addcard(name, link) {
+  const elem = elemTemplate.querySelector(".element").cloneNode(true);
+  elem.querySelector(".element__image").src = link;
+  elem.querySelector(".element__text").textContent = name;
+  elementsArray.append(elem);
+  let heart = elem.querySelector(".element__heart");
+  heart.addEventListener("click", function (evt) {
+    const eventTarget = evt.target;
+    eventTarget.classList.toggle("element__heart_black");
+  });
+}
 
 // template
 
 const elemTemplate = document.querySelector("#templateElement").content;
 const elementsArray = document.querySelector(".elements");
 for (let i = 0; i < initialCards.length; i++) {
-  const elem = elemTemplate.querySelector(".element").cloneNode(true);
-  elem.querySelector(".element__image").src = initialCards[i].link;
-  elem.querySelector(".element__text").textContent = initialCards[i].name;
-  elementsArray.append(elem);
+  addcard(initialCards[i].name, initialCards[i].link);
 }
 
-// hearts_black
-let hearts = document.querySelectorAll(".element__heart");
-for (let i = 0; i < hearts.length; i++) {
-  hearts[i].addEventListener("click", function (evt) {
-    const eventTarget = evt.target;
-    eventTarget.classList.toggle("element__heart_black");
-  });
+// submit_mesto
+
+function formPlaceSubmit(evt) {
+  evt.preventDefault();
+  const name = textInput.value;
+  const link = linkInput.value;
+  addcard(name, link);
+  closeformPlace();
 }
+
+buttonOpenProfile.addEventListener("click", openformProfile);
+form.addEventListener("submit", handleFormSubmit);
+formPlace.addEventListener("submit", formPlaceSubmit);
+buttonCloseProfile.addEventListener("click", closeformProfile);
+buttonOpenPlace.addEventListener("click", openformPlace);
+buttonClosePlace.addEventListener("click", closeformPlace);
