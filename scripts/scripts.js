@@ -11,7 +11,7 @@ let buttonClosePlace = document.querySelector("#popupClosePlace");
 let buttonOpenPlace = document.querySelector(".profile__button");
 let textInput = document.querySelector("#popup_text");
 let linkInput = document.querySelector("#popup_link");
-let heart = document.querySelector(".element__heart");
+let hearts = document.querySelectorAll(".element__heart");
 const initialCards = [
   {
     name: "Архыз",
@@ -72,7 +72,9 @@ buttonCloseProfile.addEventListener("click", closeformProfile);
 buttonOpenPlace.addEventListener("click", openformPlace);
 buttonClosePlace.addEventListener("click", closeformPlace);
 
-// let hearts = document.querySelectorAll(".element__heart");
-// for (let i = 0; i < hearts.length; i++) {
-//   hearts[i].addEventListener("click", changecolour);
-// }
+for (let i = 0; i < hearts.length; i++) {
+  hearts[i].addEventListener("click", function (evt) {
+    const eventTarget = evt.target;
+    eventTarget.classList.toggle("element__heart_black");
+  });
+}
