@@ -11,7 +11,6 @@ let buttonClosePlace = document.querySelector("#popupClosePlace");
 let buttonOpenPlace = document.querySelector(".profile__button");
 let textInput = document.querySelector("#popup_text");
 let linkInput = document.querySelector("#popup_link");
-let hearts = document.querySelectorAll(".element__heart");
 const initialCards = [
   {
     name: "Архыз",
@@ -72,6 +71,19 @@ buttonCloseProfile.addEventListener("click", closeformProfile);
 buttonOpenPlace.addEventListener("click", openformPlace);
 buttonClosePlace.addEventListener("click", closeformPlace);
 
+// template
+
+const elemTemplate = document.querySelector("#templateElement").content;
+const elementsArray = document.querySelector(".elements");
+for (let i = 0; i < initialCards.length; i++) {
+  const elem = elemTemplate.querySelector(".element").cloneNode(true);
+  elem.querySelector(".element__image").src = initialCards[i].link;
+  elem.querySelector(".element__text").textContent = initialCards[i].name;
+  elementsArray.append(elem);
+}
+
+// hearts_black
+let hearts = document.querySelectorAll(".element__heart");
 for (let i = 0; i < hearts.length; i++) {
   hearts[i].addEventListener("click", function (evt) {
     const eventTarget = evt.target;
