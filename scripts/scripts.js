@@ -11,6 +11,7 @@ let buttonClosePlace = document.querySelector("#popupClosePlace");
 let buttonOpenPlace = document.querySelector(".profile__button");
 let textInput = document.querySelector("#popup_text");
 let linkInput = document.querySelector("#popup_link");
+let heart = document.querySelector(".element__heart");
 const initialCards = [
   {
     name: "Архыз",
