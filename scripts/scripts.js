@@ -12,7 +12,8 @@ let buttonClosePlace = document.querySelector("#popupClosePlace");
 let buttonOpenPlace = document.querySelector(".profile__button");
 let textInput = document.querySelector("#popup_text");
 let linkInput = document.querySelector("#popup_link");
-let element = document.querySelector(".element");
+let elementImage = document.querySelector(".element__image");
+
 const initialCards = [
   {
     name: "Архыз",
@@ -80,6 +81,13 @@ function addcard(name, link) {
   let buttonDelete = elem.querySelector(".element__garbage");
   buttonDelete.addEventListener("click", function (evt) {
     evt.target.parentElement.parentElement.remove();
+  });
+  let elementImage = elem.querySelector(".element__image");
+  elementImage.addEventListener("click", function () {
+    let popupImg = document.querySelector(".popup-img");
+    popupImg.classList.add("popup-img_opened");
+    popupImg.querySelector(".popup-img__img").src = link;
+    popupImg.querySelector(".popup-img__title").textContent = name;
   });
 }
 
