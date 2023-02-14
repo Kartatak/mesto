@@ -1,0 +1,7 @@
+.element__box {
+  position: relative;
+  width: 282px;
+  height: 282px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
