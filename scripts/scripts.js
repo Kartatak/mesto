@@ -13,6 +13,8 @@ let buttonOpenPlace = document.querySelector(".profile__button");
 let textInput = document.querySelector("#popup_text");
 let linkInput = document.querySelector("#popup_link");
 let elementImage = document.querySelector(".element__image");
+let buttonCloseImg = document.querySelector(".popup-img__close");
+let popupImg = document.querySelector(".popup-img");
 
 const initialCards = [
   {
@@ -84,7 +86,6 @@ function addcard(name, link) {
   });
   let elementImage = elem.querySelector(".element__image");
   elementImage.addEventListener("click", function () {
-    let popupImg = document.querySelector(".popup-img");
     popupImg.classList.add("popup-img_opened");
     popupImg.querySelector(".popup-img__img").src = link;
     popupImg.querySelector(".popup-img__title").textContent = name;
@@ -109,9 +110,14 @@ function formPlaceSubmit(evt) {
   closeformPlace();
 }
 
+function closePopupImg() {
+  popupImg.classList.remove("popup-img_opened");
+}
+
 buttonOpenProfile.addEventListener("click", openformProfile);
 form.addEventListener("submit", handleFormSubmit);
 formPlace.addEventListener("submit", formPlaceSubmit);
 buttonCloseProfile.addEventListener("click", closeformProfile);
 buttonOpenPlace.addEventListener("click", openformPlace);
 buttonClosePlace.addEventListener("click", closeformPlace);
+buttonCloseImg.addEventListener("click", closePopupImg);
