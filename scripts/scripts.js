@@ -1,20 +1,20 @@
-let popupProfile = document.querySelector("#popup_profile");
-let popupPlace = document.querySelector("#popup_place");
-let form = document.querySelector("#form_profile");
-let formPlace = document.querySelector("#form_place");
-let nameInput = document.querySelector("#popup_name");
-let jobInput = document.querySelector("#popup_job");
-let profileTitle = document.querySelector(".profile__title");
-let profileText = document.querySelector(".profile__text");
-let buttonOpenProfile = document.querySelector(".profile__button-edit");
-let buttonCloseProfile = document.querySelector("#popupCloseProfile");
-let buttonClosePlace = document.querySelector("#popupClosePlace");
-let buttonOpenPlace = document.querySelector(".profile__button");
-let textInput = document.querySelector("#popup_text");
-let linkInput = document.querySelector("#popup_link");
-let elementImage = document.querySelector(".element__image");
-let buttonCloseImg = document.querySelector(".popup-img__close");
-let popupImg = document.querySelector(".popup-img");
+const popupProfile = document.querySelector("#popup_profile");
+const popupPlace = document.querySelector("#popup_place");
+const form = document.querySelector("#form_profile");
+const formPlace = document.querySelector("#form_place");
+const nameInput = document.querySelector("#popup_name");
+const jobInput = document.querySelector("#popup_job");
+const profileTitle = document.querySelector(".profile__title");
+const profileText = document.querySelector(".profile__text");
+const buttonOpenProfile = document.querySelector(".profile__button-edit");
+const buttonCloseProfile = document.querySelector("#popupCloseProfile");
+const buttonClosePlace = document.querySelector("#popupClosePlace");
+const buttonOpenPlace = document.querySelector(".profile__button");
+const textInput = document.querySelector("#popup_text");
+const linkInput = document.querySelector("#popup_link");
+const elementImage = document.querySelector(".element__image");
+const buttonCloseImg = document.querySelector(".popup-img__close");
+const popupImg = document.querySelector(".popup-img");
 
 const initialCards = [
   {
@@ -74,17 +74,17 @@ function addcard(name, link) {
   const elem = elemTemplate.querySelector(".element").cloneNode(true);
   elem.querySelector(".element__image").src = link;
   elem.querySelector(".element__text").textContent = name;
-  elementsArray.append(elem);
-  let heart = elem.querySelector(".element__heart");
+  elementsArray.prepend(elem);
+  const heart = elem.querySelector(".element__heart");
   heart.addEventListener("click", function (evt) {
     const eventTarget = evt.target;
     eventTarget.classList.toggle("element__heart_black");
   });
-  let buttonDelete = elem.querySelector(".element__garbage");
+  const buttonDelete = elem.querySelector(".element__garbage");
   buttonDelete.addEventListener("click", function (evt) {
     evt.target.parentElement.parentElement.remove();
   });
-  let elementImage = elem.querySelector(".element__image");
+  const elementImage = elem.querySelector(".element__image");
   elementImage.addEventListener("click", function () {
     popupImg.classList.add("popup-img_opened");
     popupImg.querySelector(".popup-img__img").src = link;
