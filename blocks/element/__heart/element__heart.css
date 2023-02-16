@@ -4,6 +4,7 @@
   border: none;
   background-color: rgba(0, 0, 0, 0);
   background-image: url("../../../images/heart.svg");
+  margin-right: 5px;
 }
 
 .element__heart:hover {
