@@ -1,4 +1,4 @@
-.popup__submit {
+.popup-form__submit {
   width: 100%;
   background: #000000;
   border-radius: 2px;
@@ -14,12 +14,12 @@
   padding: 13px 0;
 }
 
-.popup__submit:hover {
+.popup-form__submit:hover {
   opacity: 0.8;
 }
 
 @media screen and (max-width: 640px) {
-  .popup__submit {
+  .popup-form__submit {
     font-size: 14px;
     padding: 15px 0;
   }

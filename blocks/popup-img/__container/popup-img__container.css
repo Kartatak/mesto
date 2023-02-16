@@ -1,8 +1,0 @@
-.popup-img__container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  max-height: calc(75vh + 10px + 15px);
-  z-index: 10;
-  gap: 10px 0;
-}
