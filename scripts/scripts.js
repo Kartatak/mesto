@@ -1,20 +1,18 @@
 const popupProfile = document.querySelector("#popup_profile");
 const popupPlace = document.querySelector("#popup_place");
 const popupImg = document.querySelector("#popup_img");
-const form = document.querySelector("#form_profile");
+const popupImgImg = popupImg.querySelector(".popup-img__img");
+const popupImgTitle = popupImg.querySelector(".popup-img__title");
+const formProfile = document.querySelector("#form_profile");
 const formPlace = document.querySelector("#form_place");
 const nameInput = document.querySelector("#popup_name");
 const jobInput = document.querySelector("#popup_job");
 const profileTitle = document.querySelector(".profile__title");
 const profileText = document.querySelector(".profile__text");
 const buttonOpenProfile = document.querySelector(".profile__button-edit");
-const buttonCloseProfile = document.querySelector("#popupCloseProfile");
-const buttonClosePlace = document.querySelector("#popupClosePlace");
 const buttonOpenPlace = document.querySelector(".profile__button");
 const textInput = document.querySelector("#popup_text");
 const linkInput = document.querySelector("#popup_link");
-const elementImage = document.querySelector(".element__image");
-const buttonCloseImg = document.querySelector(".popup-img__close");
 const elemTemplate = document.querySelector("#templateElement").content;
 const elementsArray = document.querySelector(".elements");
 
@@ -45,11 +43,10 @@ const initialCards = [
   },
 ];
 
-function addcard(name, link) {
+function createCard(name, link) {
   const elem = elemTemplate.querySelector(".element").cloneNode(true);
   elem.querySelector(".element__image").src = link;
   elem.querySelector(".element__text").textContent = name;
-  elementsArray.prepend(elem);
   const heart = elem.querySelector(".element__heart");
   heart.addEventListener("click", function (evt) {
     const eventTarget = evt.target;
@@ -57,14 +54,15 @@ function addcard(name, link) {
   });
   const buttonDelete = elem.querySelector(".element__garbage");
   buttonDelete.addEventListener("click", function (evt) {
-    evt.target.parentElement.parentElement.remove();
+    evt.target.closest(".element").remove();
   });
   const elementImage = elem.querySelector(".element__image");
   elementImage.addEventListener("click", function () {
-    popupImg.querySelector(".popup-img__img").src = link;
-    popupImg.querySelector(".popup-img__title").textContent = name;
+    popupImgImg.src = link;
+    popupImgTitle.textContent = name;
     openPopup(popupImg);
   });
+  return elem;
 }
 
 function openPopup(popup) {
@@ -75,18 +73,19 @@ function closePopup(popup) {
   popup.classList.remove("popup_opened");
 }
 
-function handleFormSubmit(evt) {
+function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   profileTitle.textContent = nameInput.value;
   profileText.textContent = jobInput.value;
   closePopup(popupProfile);
 }
 
-function formPlaceSubmit(evt) {
+function handlePlaceFormSubmit(evt) {
   evt.preventDefault();
   const name = textInput.value;
   const link = linkInput.value;
-  addcard(name, link);
+  const card = createCard(name, link);
+  elementsArray.prepend(card);
   textInput.value = "";
   linkInput.value = "";
   closePopup(popupPlace);
@@ -94,7 +93,8 @@ function formPlaceSubmit(evt) {
 
 // template
 for (let i = 0; i < initialCards.length; i++) {
-  addcard(initialCards[i].name, initialCards[i].link);
+  const card = createCard(initialCards[i].name, initialCards[i].link);
+  elementsArray.prepend(card);
 }
 
 nameInput.value = profileTitle.textContent;
@@ -114,5 +114,5 @@ Array.from(document.querySelectorAll(".popup__close")).forEach(function (
     closePopup(popup);
   });
 });
-form.addEventListener("submit", handleFormSubmit);
-formPlace.addEventListener("submit", formPlaceSubmit);
+formProfile.addEventListener("submit", handleProfileFormSubmit);
+formPlace.addEventListener("submit", handlePlaceFormSubmit);
