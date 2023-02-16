@@ -1,0 +1,4 @@
+.popup__container_fixed-width {
+  width: calc(100% - 19px * 2);
+  max-width: 358px;
+}
