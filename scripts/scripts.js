@@ -77,12 +77,6 @@ function closePopup(popup) {
   popup.classList.remove("popup_opened");
 }
 
-document.addEventListener("keydown", function (evt) {
-  if (evt.key == "Escape") {
-    popups.forEach((popup) => closePopup(popup));
-  }
-});
-
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   profileTitle.textContent = nameInput.value;
@@ -125,3 +119,17 @@ Array.from(document.querySelectorAll(".popup__close")).forEach(function (
 });
 formProfile.addEventListener("submit", handleProfileFormSubmit);
 formPlace.addEventListener("submit", handlePlaceFormSubmit);
+
+document.addEventListener("keydown", function (evt) {
+  if (evt.key == "Escape") {
+    popups.forEach((popup) => closePopup(popup));
+  }
+});
+
+popups.forEach((popup) => {
+  popup.addEventListener("click", (evt) => {
+    if (evt.target.classList.contains("popup")) {
+      closePopup(popup);
+    }
+  });
+});
