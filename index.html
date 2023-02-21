@@ -61,9 +61,10 @@
                   minlength="2"
                   maxlength="40"
                 />
-                <span class="popup-form__input-error" id="nameError"
-                  >Вы пропустили это поле.</span
-                >
+                <span
+                  class="popup-form__input-error"
+                  id="popup_name-error"
+                ></span>
                 <input
                   id="popup_job"
                   class="popup-form__input"
@@ -75,9 +76,10 @@
                   minlength="2"
                   maxlength="200"
                 />
-                <span class="popup-form__input-error" id="jobError"
-                  >Введите адрес сайта.</span
-                >
+                <span
+                  class="popup-form__input-error"
+                  id="popup_job-error"
+                ></span>
                 <button type="submit" class="popup-form__submit">
                   Сохранить
                 </button>
@@ -103,6 +105,7 @@
                   name="name_place"
                   required
                 />
+                <span class="popup-form__input-error" id="popup_text-error"></span>
                 <input
                   id="popup_link"
                   class="popup-form__input"
@@ -111,6 +114,7 @@
                   name="link"
                   required
                 />
+                <span class="popup-form__input-error" id="popup_link-error"></span>
                 <button type="submit" class="popup-form__submit">
                   Создать
                 </button>
