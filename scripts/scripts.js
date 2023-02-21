@@ -15,6 +15,7 @@ const textInput = document.querySelector("#popup_text");
 const linkInput = document.querySelector("#popup_link");
 const elemTemplate = document.querySelector("#templateElement").content;
 const elementsArray = document.querySelector(".elements");
+const popups = Array.from(document.querySelectorAll(".popup"));
 
 const initialCards = [
   {
@@ -75,6 +76,12 @@ function openPopup(popup) {
 function closePopup(popup) {
   popup.classList.remove("popup_opened");
 }
+
+document.addEventListener("keydown", function (evt) {
+  if (evt.key == "Escape") {
+    popups.forEach((popup) => closePopup(popup));
+  }
+});
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
