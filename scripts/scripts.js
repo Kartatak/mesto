@@ -132,6 +132,20 @@ const showInputError = (formElement, inputElement, errorMessage) => {
   errorElement.classList.add("popup-form__input-error_active");
 };
 
+const hasInvalidInput = (inputList) => {
+  return inputList.some((inputElement) => {
+    return !inputElement.validity.valid;
+  });
+};
+
+const toggleButtonState = (inputList, buttonElement) => {
+  if (hasInvalidInput(inputList)) {
+    buttonElement.classList.add("popup-form__submit_non-active");
+  } else {
+    buttonElement.classList.remove("popup-form__submit_non-active");
+  }
+};
+
 const hideInputError = (formElement, inputElement) => {
   const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
   inputElement.classList.remove("popup-form__input_error");
@@ -151,9 +165,12 @@ const setEventListeners = (formElement) => {
   const inputList = Array.from(
     formElement.querySelectorAll(".popup-form__input")
   );
+  const buttonElement = formElement.querySelector(".popup-form__submit");
+  toggleButtonState(inputList, buttonElement);
   inputList.forEach((inputElement) => {
     inputElement.addEventListener("input", function () {
       checkInputValidity(formElement, inputElement);
+      toggleButtonState(inputList, buttonElement);
     });
   });
 };
@@ -167,4 +184,4 @@ const enableValidation = () => {
     setEventListeners(formElement);
   });
 };
-enableValidation(form, formInput, formError);
+enableValidation();
