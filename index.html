@@ -58,7 +58,12 @@
                   name="name"
                   required
                   value="Жак-Ив Кусто"
+                  minlength="2"
+                  maxlength="40"
                 />
+                <span class="popup-form__input-error" id="nameError"
+                  >Вы пропустили это поле.</span
+                >
                 <input
                   id="popup_job"
                   class="popup-form__input"
@@ -67,7 +72,12 @@
                   name="job"
                   required
                   value="Исследователь океана"
+                  minlength="2"
+                  maxlength="200"
                 />
+                <span class="popup-form__input-error" id="jobError"
+                  >Введите адрес сайта.</span
+                >
                 <button type="submit" class="popup-form__submit">
                   Сохранить
                 </button>
