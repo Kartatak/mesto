@@ -72,10 +72,12 @@ function createCard(name, link) {
 
 function openPopup(popup) {
   popup.classList.add("popup_opened");
+  document.addEventListener("keydown", closeByEscape);
 }
 
 function closePopup(popup) {
   popup.classList.remove("popup_opened");
+  document.removeEventListener("keydown", closeByEscape);
 }
 
 function handleProfileFormSubmit(evt) {
@@ -129,11 +131,12 @@ Array.from(document.querySelectorAll(".popup__close")).forEach(function (
 formProfile.addEventListener("submit", handleProfileFormSubmit);
 formPlace.addEventListener("submit", handlePlaceFormSubmit);
 
-document.addEventListener("keydown", function (evt) {
-  if (evt.key == "Escape") {
-    popups.forEach((popup) => closePopup(popup));
+function closeByEscape(evt) {
+  if (evt.key === "Escape") {
+    const openedPopup = document.querySelector(".popup_opened");
+    closePopup(openedPopup);
   }
-});
+}
 
 popups.forEach((popup) => {
   popup.addEventListener("click", (evt) => {
