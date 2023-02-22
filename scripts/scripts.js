@@ -16,6 +16,7 @@ const linkInput = document.querySelector("#popup_link");
 const elemTemplate = document.querySelector("#templateElement").content;
 const elementsArray = document.querySelector(".elements");
 const popups = Array.from(document.querySelectorAll(".popup"));
+const submitButtonPlace = document.querySelector("#submitButtonPlace");
 
 const initialCards = [
   {
@@ -106,9 +107,16 @@ buttonOpenProfile.addEventListener("click", function () {
   jobInput.value = profileText.textContent;
   openPopup(popupProfile);
 });
+
 buttonOpenPlace.addEventListener("click", function () {
   openPopup(popupPlace);
+  toggleButtonState(
+    [textInput, linkInput],
+    submitButtonPlace,
+    "popup-form__submit_non-active"
+  );
 });
+
 Array.from(document.querySelectorAll(".popup__close")).forEach(function (
   button
 ) {
@@ -117,6 +125,7 @@ Array.from(document.querySelectorAll(".popup__close")).forEach(function (
     closePopup(popup);
   });
 });
+
 formProfile.addEventListener("submit", handleProfileFormSubmit);
 formPlace.addEventListener("submit", handlePlaceFormSubmit);
 
